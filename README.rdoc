@@ -1,4 +1,8 @@
-My personal solutions for the Ruby Koans from http://rubykoans.com/ 
+My personal solutions for the Ruby Koans.
+
+Please fork from https://github.com/neo/ruby_koans  
+
+More Info at: http://rubykoans.com/   
 
 http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png
 
