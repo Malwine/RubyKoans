@@ -102,7 +102,7 @@ EOS
     #
     # Ruby programmers tend to favor the shovel operator (<<) over the
     # plus equals operator (+=) when building up strings.  Why?
-    # Because the shovel operator concatenates to the original string. 
+    # Because the shovel operator concatenates to the original string.
     # Instead of creating a new one. Performance.
   end
 
