@@ -33,15 +33,10 @@ def score(dice)
   return 0 if dice.empty?
 
   amount = 0
-  numbers = Hash.new
-  numbers = { 1 => 0, 2 => 0, 3 => 0, 4 => 0, 5 => 0, 6 => 0 }
+  numbers = Hash.new(0)
 
   dice.each do | element |
-    numbers.each do |key, value|
-      if key == element
-        numbers[key] += 1
-      end
-    end
+     numbers[element] += 1
   end
 
   if numbers[1] == 3
