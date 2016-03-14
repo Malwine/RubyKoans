@@ -39,25 +39,18 @@ def score(dice)
      numbers[element] += 1
   end
 
-  if numbers[1] == 3
-    amount += 1000
-  elsif numbers[1] == 4
-    amount += 1100
-  elsif numbers[1] == 5
-    amount += 1200
-  else
-    amount += 100 * numbers[1]
-  end
+  numbers.each do | number, count|
 
-  numbers.each do | key, value|
-    if value >= 3 && key != 1
-      amount += key * 100
-    elsif key == 5 && value < 4
-      amount += 50 * numbers[5]
+    if count >= 3 && number != 1
+      amount = number * 100
+      count -= 3
+    elsif count >= 3
+      amount = 1000
+      count -= 3
     end
-    if key == 5 && value > 3
-      amount += (numbers[5]-3) * 50
-    end
+
+    amount += count * 100 if count <= 3 && number == 1
+    amount += count * 50  if count <= 3 && number == 5
   end
 
   amount
